@@ -14,12 +14,12 @@ jobs:
 
       - name: Debug - List Files
         run: ls -la
-        
+
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}     
 
       - name: Build Docker Image
-        run: docker build -t barathravichandran/dsatrackernodeapp:latest .
+        run: docker build -t barathravichandran/dsatrackernodeapp:latest -f Dockerfile .
 
       - name: Push Image to Docker Hub
         run: docker push barathravichandran/dsatrackernodeapp:latest 
