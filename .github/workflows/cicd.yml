@@ -21,7 +21,6 @@ jobs:
       - name: Push Image to Docker Hub
         run: docker push barathravichandran/dsatrackernodeapp:latest 
 
-
   deploy:
     needs: build
     runs-on: self-hosted 
